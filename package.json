@@ -4,7 +4,7 @@
   "description": "Hook to delay execution of a callback, until confirmation is given",
   "author": "LorisSigrist",
   "license": "MIT",
-  "repository": "LorisSigrist/use-confirmation",
+  "repository": "LorisSigrist/useConfirmation",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
