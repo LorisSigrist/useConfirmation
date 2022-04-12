@@ -24,7 +24,7 @@ const App = () => {
         visible={waitingForConfirmation}
         onCancel={cancel} 
         onConfirm={confirm} 
-        text={`Do you really run ${text}`}
+        text={`Do you really run the dangerous callback?`}
       />
     </div>
   )
