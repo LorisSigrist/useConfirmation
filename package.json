@@ -1,6 +1,6 @@
 {
   "name": "use-confirmation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hook to delay execution of a callback, until confirmation is given",
   "author": "LorisSigrist",
   "license": "MIT",
