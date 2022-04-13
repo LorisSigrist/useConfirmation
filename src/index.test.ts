@@ -1,4 +1,4 @@
-import { useConfirmation } from './'
+import useConfirmation from './'
 import { renderHook, act } from "@testing-library/react-hooks";
 
 describe('useConfirmation', () => {

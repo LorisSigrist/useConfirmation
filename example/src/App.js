@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import { useConfirmation } from 'use-confirmation'
+import useConfirmation from 'use-confirmation'
 
 const App = () => {
   return (

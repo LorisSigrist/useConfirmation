@@ -7,7 +7,7 @@ type useConfirmationType = (callback: Function, skipConfirmation?: boolean) => {
   waitingForConfirmation: boolean
 }
 
-export const useConfirmation : useConfirmationType= (callback, skipConfirmation) => {
+const useConfirmation : useConfirmationType= (callback, skipConfirmation) => {
   
   const [waitingForConfirmation, setWaitingForConfirmation] = useState(false);
 
@@ -43,3 +43,5 @@ export const useConfirmation : useConfirmationType= (callback, skipConfirmation)
     confirm
   }
 };
+
+export default useConfirmation;
