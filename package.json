@@ -1,8 +1,8 @@
 {
   "name": "use-confirmation",
   "version": "1.0.2",
-  "description": "Hook to delay execution of a callback, until confirmation is given",
-  "author": "LorisSigrist",
+  "description": "Hook to delay execution of a callback, until explicit confirmation is given",
+  "author": "Loris Sigrist",
   "license": "MIT",
   "repository": "LorisSigrist/useConfirmation",
   "main": "dist/index.js",
