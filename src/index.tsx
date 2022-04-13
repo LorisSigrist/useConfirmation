@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useCallback} from 'react';
 
 type useConfirmationType = (callback: Function, skipConfirmation?: boolean) => {
   run: ()=>void,
@@ -11,22 +11,26 @@ export const useConfirmation : useConfirmationType= (callback, skipConfirmation)
   
   const [waitingForConfirmation, setWaitingForConfirmation] = useState(false);
 
-  function run(){
+  const run = useCallback(()=>{
     if(!skipConfirmation){
       setWaitingForConfirmation(true)
     }else {
       callback();
     }
-  }
-  function confirm(){
+  },[callback, skipConfirmation, waitingForConfirmation])
+
+
+  const confirm = useCallback(()=>{
     if(waitingForConfirmation){
       callback();
     }
     setWaitingForConfirmation(false)
-  }
-  function cancel(){
+  },[callback, waitingForConfirmation])
+
+
+  const cancel = useCallback(() => {
     setWaitingForConfirmation(false)
-  }
+  },[])
 
   useEffect(()=>{
     if(skipConfirmation) confirm()

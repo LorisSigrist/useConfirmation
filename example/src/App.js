@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import { useConfirmation } from 'use-confirmation'
 
@@ -14,7 +14,10 @@ export default App
 
 
 const ConfirmExample = ({text}) => {
-  const dangerousCallback = () => console.log(text);
+
+  const [invocations, setInvocations] = useState(0)
+
+  const dangerousCallback = () => setInvocations(invocations + 1)
   const {
           run, 
           cancel, 
@@ -22,8 +25,9 @@ const ConfirmExample = ({text}) => {
           waitingForConfirmation
         } = useConfirmation(dangerousCallback)
   return (
+
     <div>
-      <button onClick={run}>Run</button>
+      <button onClick={run}>Run {invocations}</button>
       <ConfirmationModal 
         visible={waitingForConfirmation}
         onCancel={cancel} 
