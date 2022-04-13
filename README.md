@@ -1,4 +1,4 @@
-# use-confirmation
+# useConfirmation
 
 A hook to ask users for confirmation before executing a function. 
 
@@ -7,6 +7,8 @@ Install via npm: `npm i use-confirmation`
 ## Usage
 
 ```jsx
+import useConfirmation from 'use-confirmation'
+
 const App = () => {
   const dangerousCallback = () => console.log("This is some dangerous Code");
 
@@ -20,6 +22,8 @@ const App = () => {
   return (
     <div>
       <button onClick={run}>Run</button>
+
+      <!--Write your own modal-->
       <ConfirmationModal 
         visible={waitingForConfirmation}
         onCancel={cancel} 
